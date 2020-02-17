@@ -1,25 +1,23 @@
+
+
+1. Import some packages
+‘requests’ calling ‘import requests’
+‘BeautifulSoup’ calling ‘from bs4 import BeautifulSoup’'
+
 from bs4 import BeautifulSoup
 import requests
-import numpy as np
-import re
-import pandas as pd
-
-
-‘requests’ calling ‘import requests’
-‘BeautifulSoup’ calling ‘from bs4 import BeautifulSoup’
-
-
-[Chrome] We can access the webpage HTML code by doing:
+ 
+2. We can access the webpage HTML code by doing[Chrome]:
 Right-click > Inspect
 Or either in Mac pressing Command+shift+c
 
-
-
-Instantiate a ‘requests’ object with the URL and optional parameters through the request.
-
+3. Instantiate a ‘requests’ object with the URL and optional parameters through the request.
 url = ‘https://www.penguin.co.uk/articles/2018/100-must-read-classic-books/'
 r = requests.get(url)
 
-Create the BeautifulSoup object to pass our request text through its HTML parser: 
-
+4. Create the BeautifulSoup object to pass our request text through its HTML parser: 
 soup = BeautifulSoup(r.text,’html.parser’)
+
+5. Find all the ‘cmp-text text’ elements in the code
+for book in soup.find_all(‘div’, attrs={'class': 'cmp-text text'})
+ 
