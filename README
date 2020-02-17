@@ -1,3 +1,9 @@
+from bs4 import BeautifulSoup
+import requests
+import numpy as np
+import re
+import pandas as pd
+
 
 ‘requests’ calling ‘import requests’
 ‘BeautifulSoup’ calling ‘from bs4 import BeautifulSoup’
