@@ -1,0 +1,19 @@
+
+‘requests’ calling ‘import requests’
+‘BeautifulSoup’ calling ‘from bs4 import BeautifulSoup’
+
+
+[Chrome] We can access the webpage HTML code by doing:
+Right-click > Inspect
+Or either in Mac pressing Command+shift+c
+
+
+
+Instantiate a ‘requests’ object with the URL and optional parameters through the request.
+
+url = ‘https://www.penguin.co.uk/articles/2018/100-must-read-classic-books/'
+r = requests.get(url)
+
+Create the BeautifulSoup object to pass our request text through its HTML parser: 
+
+soup = BeautifulSoup(r.text,’html.parser’)
